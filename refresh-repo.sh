@@ -10,7 +10,7 @@ COMMIT_MSG="Update dependencies"
 
 REPO_ROOT=/tmp/bb-repo-refresher
 
-AUDIT_REF=${AUDIT_REF:-v0.0.10}
+AUDIT_REF=${AUDIT_REF:-v0.0.11}
 
 repo_uptodate() {
     # gomodfiles=(go.mod go.sum vendor/modules.txt)
@@ -37,7 +37,7 @@ refresh() {
             go mod tidy
         fi
         go mod edit \
-            -require=kmodules.xyz/client-go@69e942428bab21ff1a142cc9165e25679133cda1 \
+            -require=kmodules.xyz/client-go@0cf6ea46b0306b255a82f14b00b374027b0e9192 \
             -require=kmodules.xyz/monitoring-agent-api@38ca075a2dbde85cf48d84b699720925066a5f3a \
             -require=kmodules.xyz/webhook-runtime@7f73c2ab318a43feb61f11696815d2abdc745af1 \
             -require=kmodules.xyz/resource-metadata@v0.6.7 \
